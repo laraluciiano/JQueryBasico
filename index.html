@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con jQuery y Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 id="page-title">¡Mirá la siguiente imagen!</h1>
+        <div class="my-3">
+            <button id="hide-btn" class="btn btn-primary">Ocultar Imagen</button>
+            <button id="show-btn" class="btn btn-secondary">Mostrar Imagen</button>
+        </div>
+        <img id="image" src="/17084432138579.jpg" alt="Imagen de ejemplo" class="img-fluid">
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#hide-btn').click(function(){
+                $('#image').hide();
+                $('#page-title').text('¡No tenemos ninguna imagen!');
+            });
+
+            $('#show-btn').click(function(){
+                $('#image').show();
+                $('#page-title').text('¡Mirá la siguiente imagen!');
+            });
+        });
+    </script>
+</body>
+</html>
